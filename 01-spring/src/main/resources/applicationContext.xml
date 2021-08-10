@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:content="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <content:component-scan base-package="com.weilan">
+        <content:exclude-filter type="assignable" expression="com.weilan.entity.HelloWorld"/>
+    </content:component-scan>
+
+    <!--<bean id="myProcess" class="com.weilan.handler.MyProcess"/>-->
+
+
+    <!--<content:property-placeholder location="classpath:jdbc.properties"/>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="username" value="${jdbc.username}"/>
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean id="factoryBean" class="com.weilan.myfactory.BookFactoryBean"/>
+
+    
+    <bean id="book" class="com.weilan.entity.BookImpl">
+        <property name="name">
+            <null/>
+        </property>
+        <property name="id" value="1"/>
+        <property name="author">
+            <value><![CDATA[<xw>]]></value>
+        </property>
+        <property name="price" value="12.0"/>
+    </bean>-->
+
+    <!--<bean id="bookStrop" class="com.weilan.entity.BookStrop">
+        <property name="book">
+            <bean class="com.weilan.entity.BookImpl" p:id="1"
+            p:price="1"
+            p:name="1"
+            p:author="1"/>
+        </property>
+        <property name="name" value="sd"/>
+    </bean>-->
+    <!--<bean id="bookStrop" class="com.weilan.entity.BookStrop">
+        <property name="book" ref="book"/>
+        <property name="name" value="sd"/>
+    </bean>-->
+    <!--<bean id="bookStrop" class="com.weilan.entity.BookStrop" autowire="byName">
+        <property name="name" value="sd"/>
+    </bean>-->
+
+    <!--<bean id="book" class="com.weilan.entity.BookImpl">
+        <constructor-arg name="id" value="1"/>
+        <constructor-arg name="name" value="xw"/>
+        <constructor-arg name="author" value="xw"/>
+        <constructor-arg name="price" value="120.0"/>
+    </bean>-->
+
+    <!--<bean id="book" class="com.weilan.entity.BookImpl"
+          p:id="1"
+          p:author="xw"
+          p:name="xw"
+          p:price="20.2"
+    />-->
+
+</beans>
